@@ -8,6 +8,12 @@ class Move {
 	public void addBox(Box box) {
 		boxes.add(box);
 	}
+	public void print() {
+		System.out.println("The objects of my move are:");
+		for (Box box : boxes) {
+			printContents(box.getContents());
+		}
+	}
 
 	public static void main(String[] args) {
 		// We create a move that will hold 2 main boxes
