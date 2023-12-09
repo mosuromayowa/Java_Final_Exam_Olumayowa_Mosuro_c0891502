@@ -2,7 +2,27 @@ import java.util.List;
 
 class Box {
 	private List<Object> contents;
-	private int box
+	private int boxNumber;
+
+
+	public Box(int capacity, int boxNumber) {
+		this.contents = new ArrayList<>(capacity);
+		this.boxNumber = boxNumber;
+	}
+
+	public void addItem(Object item) {
+		contents.add(item);
+	}
+
+	public List<Object> getContents() {
+		return contents;
+	}
+
+	public int getBoxNumber() {
+		return boxNumber;
+	}
+}
+
 }
 class Move {
 	private List<Box> boxes;
