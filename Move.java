@@ -1,7 +1,8 @@
 class Move {
-	private int capacity;
-	private Box[] boxes;
-	private int boxCount;
+	private List<Box> boxes;
+
+	public Move(int initialCapacity) {
+		this.boxes = new ArrayList<>(initialCapacity);
 
 	public static void main(String[] args) {
 		// We create a move that will hold 2 main boxes
