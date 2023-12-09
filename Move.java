@@ -1,8 +1,7 @@
 class Move {
-	/* *************************************** */
-	// write your code here
-
-	/* *************************************** */
+	private int capacity;
+	private Box[] boxes;
+	private int boxCount;
 
 	public static void main(String[] args) {
 		// We create a move that will hold 2 main boxes
