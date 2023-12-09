@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+// Implement the single object class with constructor and methods
 class SingleObject {
 	private String name;
 
@@ -11,6 +12,8 @@ class SingleObject {
 		return name;
 	}
 }
+// implement the box class with the constructor for the box number and capacity and method
+// to retrieve the name.
 class Box {
 	private List<Object> contents;
 	private int boxNumber;
@@ -34,7 +37,8 @@ class Box {
 	}
 }
 
-
+// Implement the `Move` class with a constructor to set the initial capacity,
+// methods to add boxes, print contents, and find items in boxes.
 class Move {
 	private List<Box> boxes;
 
@@ -57,7 +61,7 @@ class Move {
 			if (item instanceof SingleObject) {
 				SingleObject singleObject = (SingleObject) item;
 				System.out.print(singleObject.getName() + " ");
-				// trying to make the objects in one line..
+				// trying to make the objects in one line.
 				System.out.println("\t" );
 			} else if (item instanceof Box) {
 				Box subBox = (Box) item;
