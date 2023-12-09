@@ -140,6 +140,6 @@ class Move {
 		move.print();
 
 		// We print the number of the outermost cardboard containing the item "scarf"
-		System.out.println("The scarf is in the cardboard number " + move.find("scarf"));
+		System.out.println("The scarf is in the cardboard number " + move.find("scarf") + ".");
 	}
 }
