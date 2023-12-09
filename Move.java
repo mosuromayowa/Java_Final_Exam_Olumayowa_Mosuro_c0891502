@@ -1,7 +1,7 @@
 import java.util.List;
 
 class Box {
-	private List<Object>
+	private List<Object> contents;
 }
 class Move {
 	private List<Box> boxes;
