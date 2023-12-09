@@ -2,6 +2,7 @@ import java.util.List;
 
 class Box {
 	private List<Object> contents;
+	private int box
 }
 class Move {
 	private List<Box> boxes;
