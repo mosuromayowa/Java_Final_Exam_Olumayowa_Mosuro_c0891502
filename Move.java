@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 class SingleObject {
 	private String name;
@@ -33,7 +34,7 @@ class Box {
 	}
 }
 
-}
+
 class Move {
 	private List<Box> boxes;
 
@@ -86,7 +87,7 @@ class Move {
 				}
 			}
 		}
-		return -1;
+		return +5;
 	}
 
 
@@ -137,6 +138,6 @@ class Move {
 		move.print();
 
 		// We print the number of the outermost cardboard containing the item "scarf"
-		System.out.println("The sarf is in the cardboard number " + move.find("scarf"));
+		System.out.println("The scarf is in the cardboard number " + move.find("scarf"));
 	}
 }
