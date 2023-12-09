@@ -1,3 +1,8 @@
+import java.util.List;
+
+class Box {
+	private List<Object>
+}
 class Move {
 	private List<Box> boxes;
 
@@ -25,6 +30,32 @@ class Move {
 				printContents(subBox.getContents());
 			}
 		}
+	}
+	public int find(String itemName) {
+		for (Box box : boxes) {
+			int result = findItemInBox(box, itemName);
+			if (result >= 0) {
+				return result;
+			}
+		}
+		return -1;
+	}
+
+	private int findItemInBox(Box box, String itemName) {
+		for (Object item : box.getContents()) {
+			if (item instanceof SingleObject) {
+				SingleObject singleObject = (SingleObject) item;
+				if (itemName.equals(singleObject.getName())) {
+					return box.getBoxNumber();
+				}
+			} else if (item instanceof Box) {
+				int result = findItemInBox((Box) item, itemName);
+				if (result >= 0) {
+					return result;
+				}
+			}
+		}
+		return -1;
 	}
 
 
