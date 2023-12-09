@@ -15,6 +15,19 @@ class Move {
 		}
 	}
 
+	private void printContents(List<Object> contents) {
+		for (Object item : contents) {
+			if (item instanceof SingleObject) {
+				SingleObject singleObject = (SingleObject) item;
+				System.out.print(singleObject.getName() + " ");
+			} else if (item instanceof Box) {
+				Box subBox = (Box) item;
+				printContents(subBox.getContents());
+			}
+		}
+	}
+
+
 	public static void main(String[] args) {
 		// We create a move that will hold 2 main boxes
 		Move move = new Move(2);
