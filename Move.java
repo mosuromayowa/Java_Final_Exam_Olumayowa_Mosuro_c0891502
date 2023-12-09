@@ -57,6 +57,8 @@ class Move {
 			if (item instanceof SingleObject) {
 				SingleObject singleObject = (SingleObject) item;
 				System.out.print(singleObject.getName() + " ");
+				// trying to make the objects in one line..
+				System.out.println("\t" );
 			} else if (item instanceof Box) {
 				Box subBox = (Box) item;
 				printContents(subBox.getContents());
